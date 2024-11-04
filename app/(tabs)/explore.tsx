@@ -6,84 +6,70 @@ import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import exploreScreenImage from '../../assets/images/exploreScreenImage.jpg';
+
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
+      headerImage={
+        <Image
+          source={exploreScreenImage}
+          style={styles.logo}
+        />
+      }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Veja o preço das sucatas!</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>Basta clicar no botão para visualizar a descrição do item e quanto cobramos!</ThemedText>
+      
+      
+      <Collapsible title="Sucata Mista">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          Sucata Mista refere-se a uma combinação de diversos tipos de sucatas de ferro e aço, geralmente de menor valor. É composta por peças variadas de ferro, frequentemente enferrujadas e desgastadas.
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <Image
+          source={require('@/assets/images/sucataMista.webp')}
+          style={styles.scrapImage}
+        />
+        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$0,80</ThemedText>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      
+      <Collapsible title="Sucata Miúda">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+          A sucata miúda consiste em pequenos pedaços de metal, como ferro e aço, provenientes de processos industriais e demolições.
         </ThemedText>
+        <Image
+          source={require('@/assets/images/sucataMiuda.jpg')}
+          style={styles.scrapImage}
+        />
+        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$1,10</ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+
+      <Collapsible title="Sucata de Alumínio Latinha">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+          A sucata de latinha de alumínio são latas vazias descartadas que podem ser recicladas. Elas são valorizadas por sua fácil reciclagem e menor impacto ambiental.
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <Image
+          source={require('@/assets/images/sucataLatinha.jpg')}
+          style={styles.scrapImage}
+        />
+        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$7,50</ThemedText>
       </Collapsible>
-      <Collapsible title="Custom fonts">
+
+      <Collapsible title="Sucata de Alumínio Aerosol">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
+        A sucata de alumínio de aerosol refere-se a latas de spray vazias, como aquelas usadas para produtos de beleza ou limpeza. Essas latas são recicláveis e têm valor, pois o alumínio pode ser reutilizado na produção de novos produtos.
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        <Image
+          source={require('@/assets/images/sucataAerosol.jpg')}
+          style={styles.scrapImage}
+        />
+        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$9,30</ThemedText>
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText> library
-          to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
+
+
     </ParallaxScrollView>
   );
 }
@@ -98,5 +84,17 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  scrapImage: {
+    width: '100%',
+    height: 200,
+    marginTop: 8,
+    marginBottom: 8,
+  },
+  logo: {
+    width: '100%',
+    backgroundColor: '#fff',
+    height: 300,
+    resizeMode: 'cover'
   },
 });
