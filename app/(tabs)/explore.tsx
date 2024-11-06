@@ -44,7 +44,7 @@ export default function TabTwoScreen() {
           source={require('@/assets/images/sucataMiuda.jpg')}
           style={styles.scrapImage}
         />
-        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$1,10</ThemedText>
+        <ThemedText>Nosso preço atualmente para sucata miúda é de: R$1,10</ThemedText>
       </Collapsible>
 
       <Collapsible title="Sucata de Alumínio Latinha">
@@ -55,7 +55,7 @@ export default function TabTwoScreen() {
           source={require('@/assets/images/sucataLatinha.jpg')}
           style={styles.scrapImage}
         />
-        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$7,50</ThemedText>
+        <ThemedText>Nosso preço atualmente para sucata de alumínio latinha é de: R$7,50</ThemedText>
       </Collapsible>
 
       <Collapsible title="Sucata de Alumínio Aerosol">
@@ -66,7 +66,7 @@ export default function TabTwoScreen() {
           source={require('@/assets/images/sucataAerosol.jpg')}
           style={styles.scrapImage}
         />
-        <ThemedText>Nosso preço atualmente para sucata Mista é de: R$9,30</ThemedText>
+        <ThemedText>Nosso preço atualmente para sucata de alumínio aerosol é de: R$9,30</ThemedText>
       </Collapsible>
 
 
